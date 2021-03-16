@@ -10,7 +10,12 @@
         class="form-control"
         type="text"
         name="name"
-        [(ngModel)]="user.name">
+        [(ngModel)]="user.name"
+        pattern="^[A-Z].{8,40}"
+        required>
+        <div [hidden]="userForm.controls.name?.valid" class="error-message">
+          Min 8 char, max 40 char, required.
+        </div>
       </div>
       <div class="form-group">
         <label>Email</label>
@@ -20,7 +25,11 @@
           class="form-control"
           type="text"
           name="email"
-          [(ngModel)]="user.email">
+          [(ngModel)]="user.email"
+          required>
+          <div [hidden]="userForm.controls.email?.valid" class="error-message">
+            Valid email, required.
+          </div>
         </div>
         <div class="form-group">
           <label>Address</label>
@@ -29,7 +38,12 @@
           class="form-control"
           type="text"
           name="address"
-          [(ngModel)]="user.address">
+          [(ngModel)]="user.address"
+          pattern=".{8,100}"
+          required>
+          <div [hidden]="userForm.controls.address?.valid" class="error-message">
+            Min 8 char, max 100 char, required
+          </div>
       </div>
       <div class="form-group">
         <label>Active</label>
@@ -39,7 +53,7 @@
           <option [ngValue]="false">inactive</option>
         </select>
       </div>
-      <button type="submit" (click)="onUpdate(user)" class="btn btn-primary btn-block mt-5">
+      <button [disabled]="userForm.invalid" type="submit" (click)="onUpdate(user)" class="btn btn-primary btn-block mt-5">
         <i class="fa fa-save"></i>
       </button>
     </form>
