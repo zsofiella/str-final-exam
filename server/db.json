@@ -1,20 +1,6 @@
 {
   "users": [
     {
-      "id": 8,
-      "name": "Stillman Crowche",
-      "email": "scrowche7@um",
-      "address": "53 Bunting Court",
-      "active": true
-    },
-    {
-      "id": 9,
-      "name": "Roderich Jimmison",
-      "email": "rjimmison8@nih.gov",
-      "address": "0758 Pearson Junction",
-      "active": true
-    },
-    {
       "id": 10,
       "name": "Nana Stalley",
       "email": "nstalley9@sfgate.com",
