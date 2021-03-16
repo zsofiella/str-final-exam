@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 11,
-      "name": "Stanly Hembling",
-      "email": "shemblinga@narod.ru",
-      "address": "0 Kim Street",
-      "active": true
-    },
-    {
       "id": 12,
       "name": "Gawain McKillop",
       "email": "gmckillopb@geocities.jp",
